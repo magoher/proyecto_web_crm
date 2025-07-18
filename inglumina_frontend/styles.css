@@ -1,0 +1,143 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+header {
+    background-color: #141a32;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    height: 80px;         
+    border-radius: 8px;   /* Bordes redondeados */
+    border: 2px solid #fff; 
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #121b42;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, textarea, button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #121b42;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d2a6c;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #eee;
+}
+
+
+nav ul li a.active {
+  border-bottom: 2px solid #ff6600;
+}
+
+
+button.edit {
+  background-color: #28a745;
+  margin-right: 5px;
+}
+
+button.delete {
+  background-color: #d9534f;
+}
+
+button.edit:hover {
+  background-color: #218838;
+}
+
+button.delete:hover {
+  background-color: #c9302c;
+}
+
+
+.section {
+  display: none;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.section.active {
+  display: block;
+}
+
+/* Sección API EXTERNA -tareas */
+
+#proyectos-api input {
+  margin: 10px 0;
+  padding: 8px;
+  font-size: 1em;
+}
+
+#proyectos-api select,
+#proyectos-api button {
+  font-size: 0.95em;
+  padding: 4px 8px;
+}
+

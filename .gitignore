@@ -1,0 +1,25 @@
+# Entorno virtual
+venv/
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.db
+
+# Archivos de VS Code
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de base de datos (si no se quieren subir)
+*.sql
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Node modules (por si algún día usás npm)
+node_modules/

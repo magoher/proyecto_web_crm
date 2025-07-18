@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>INGlumina CRM</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+<header>
+  <img src="img/logo.webp" alt="Logo de INGlumina" id="logo">
+  <nav>
+    <ul>
+      <li><a href="javascript:void(0)" class="active" onclick="showSection('dashboard')">Dashboard</a></li>
+      <li><a href="javascript:void(0)" onclick="showSection('clientes')">Clientes</a></li>
+      <li><a href="javascript:void(0)" onclick="showSection('leads')">Leads</a></li>
+      <li><a href="javascript:void(0)" onclick="showSection('proyectos')">Proyectos</a></li>
+      <li><a href="javascript:void(0)" onclick="showSection('oportunidades')">Oportunidades</a></li>
+      <li><a href="javascript:void(0)" onclick="showSection('proyectos-api')">Proyectos API</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <main>
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="section active">
+      <h1>Bienvenido a INGlumina CRM</h1>
+      <p>Este es tu panel de control.</p>
+    </section>
+
+    <!-- CLIENTES -->
+    <section id="clientes" class="section">
+      <h2>Gestión de Clientes</h2>
+      <form id="formulario-cliente">
+        <label for="nombreCliente">Nombre:</label>
+        <input type="text" id="nombreCliente" required>
+        <label for="correoCliente">Correo:</label>
+        <input type="email" id="correoCliente">
+        <label for="telefonoCliente">Teléfono:</label>
+        <input type="tel" id="telefonoCliente">
+        <label for="empresaCliente">Empresa:</label>
+        <input type="text" id="empresaCliente">
+        <button type="submit">Guardar cliente</button>
+      </form>
+      <table id="tabla-clientes">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Teléfono</th>
+            <th>Empresa</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- LEADS -->
+<section id="leads" class="section">
+  <h2>Gestión de Leads</h2>
+  <form id="formulario-lead">
+      <label for="nombreLead">Nombre:</label>
+      <input type="text" id="nombreLead" required>
+      <label for="correoLead">Correo:</label>
+      <input type="email" id="correoLead">
+      <label for="telefonoLead">Teléfono:</label>
+      <input type="tel" id="telefonoLead">
+      <label for="interesLead">Interés:</label>
+      <input type="text" id="interesLead">
+      <label for="estadoLead">Estado:</label>
+      <select id="estadoLead">
+        <option value="nuevo">Nuevo</option>
+        <option value="contactado">Contactado</option>
+        <option value="descartado">Descartado</option>
+      </select>
+      <button type="submit">Guardar lead</button>
+  </form>
+
+  <table id="tabla-leads">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Teléfono</th>
+        <th>Interés</th>
+        <th>Estado</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+
+    <!-- PROYECTOS -->
+<section id="proyectos" class="section">
+  <h2>Gestión de Proyectos</h2>
+  <form id="formulario-proyecto">
+    <label for="nombreProyecto">Nombre del proyecto:</label>
+    <input type="text" id="nombreProyecto" required>
+    
+    <label for="descripcionProyecto">Descripción:</label>
+    <textarea id="descripcionProyecto"></textarea>
+    
+    <label for="fechaInicioProyecto">Fecha de inicio:</label>
+    <input type="date" id="fechaInicioProyecto">
+    
+    <label for="fechaFinProyecto">Fecha de fin:</label>
+    <input type="date" id="fechaFinProyecto">
+    
+    <label for="presupuestoProyecto">Presupuesto estimado:</label>
+    <input type="number" id="presupuestoProyecto" step="0.01">
+    
+    <label for="estadoProyecto">Estado:</label>
+    <select id="estadoProyecto">
+      <option value="en_proceso">En proceso</option>
+      <option value="terminado">Terminado</option>
+      <option value="pausado">Pausado</option>
+    </select>
+    
+    <label for="clienteProyecto">Cliente:</label>
+    <select id="clienteProyecto">
+      <!-- dinámicamente llenaremos opciones -->
+    </select>
+    
+    <button type="submit">Guardar proyecto</button>
+  </form>
+
+  <table id="tabla-proyectos">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Cliente</th>
+        <th>Presupuesto</th>
+        <th>Estado</th>
+        <th>Fechas</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+
+    <!-- OPORTUNIDADES -->
+    <section id="oportunidades" class="section">
+      <h2>Oportunidades</h2>
+      <p>Próximamente oportunidades de negocio.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 INGlumina. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+
+   <!-- Tareas y death lines -->
+<section id="proyectos-api" class="section">
+  <h2>🗂️ Proyectos (conexión a API propia)</h2>
+
+  <input type="text" id="buscarProyectoApi" placeholder="Buscar proyecto...">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Cliente</th>
+        <th>Estado</th>
+        <th>Presupuesto</th>
+        <th>Fechas</th>
+      </tr>
+    </thead>
+    <tbody id="proyectos-api-container"></tbody>
+  </table>
+</section>
+
